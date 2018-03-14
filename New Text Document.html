@@ -3,15 +3,170 @@
 <head>
     <title>Simple HTML</title>
     <style>
-        h1 {
-            color: green
+        body {
+            margin: 0px;
+            font-family: sans-serif;
         }
 
+        h1 {
+            color: green;
+            background-color: rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px 25px;
+            font: 32px sans-serif;
+            margin: 0px;
+        }
+
+        .Navigation {
+
+            background-color: lightcyan;
+            font: 20px sans-serif;
+
+        }
+
+        .Navigation ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .Menu {
+            position: relative;
+            display: inline-block;
+            padding: 5px 22px;
+        }
+
+        .Menu:hover {
+            background-color: lightblue;
+        }
+
+        .Menu a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .SubMenu {
+            position: absolute;
+            margin: 5px 0px;
+            display: none;
+            min-width: 150px;
+            z-index: 1;
+            box-shadow: 0px 3px 10px lightblue;
+            background-color: white;
+            border-radius: 3px;
+
+        }
+
+        .SubMenu a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            margin: 0px;
+            font: 16px sans-serif;
+        }
+
+        .SubMenu a:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+
+        .Menu:hover .SubMenu {
+            display: block;
+        }
+
+        .RightSide {
+            position: fixed;
+            right: 10px;
+            top: 150px;
+            float: right;
+            width: 25%;
+            padding: 60px 0px;
+            background-color: rgba(50, 50, 50, .05);
+            border-radius: 50px;
+        }
+
+        .RightSide a {
+            display: block;
+            padding: 10px 20px;
+        }
+
+        .Main {
+            float: left;
+            width: 70%;
+            padding: 50px 2.5%;
+            font-size: 25px;
+            margin-bottom: 600px;
+            /*            background-color: blueviolet;*/
+        }
+
+        .End {
+            clear: both;
+            padding: 20px 0px;
+            background-color: darkolivegreen;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <h1>This is simple html</h1>
+    <nav class="Navigation">
+        <ul>
+            <li class="Menu">
+                <a href="#">Persons</a>
+                <div class="SubMenu">
+                    <a href="#">All person</a>
+                    <a href="#">Students</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="#">Products</a>
+                <div class="SubMenu">
+                    <a href="#">Software</a>
+                    <a href="#">Hardware</a>
+                    <a href="#">Midellware</a>
+                </div>
+            </li>
+            <li class="Menu">
+                <a href="#">About</a>
+                <!--
+                <div class="SubMenu">
+                    <a href="#">Tema</a>
+                    <a href="#">Help</a>
+                </div>
+-->
+            </li>
+
+        </ul>
+    </nav>
+    <aside class="RightSide">
+        <a href="#1">Introduction</a>
+        <a href="#2">What is a product</a>
+        <a href="#3">How can i get a product</a>
+    </aside>
+    <section class="Main">
+        <article>
+            <h2 id="1">Introduction</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+        </article>
+        <article>
+            <h2 id="2">What is a product</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+        </article>
+        <article>
+            <h2 id="3">How can i get a product</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+        </article>
+    </section>
+    <footer class="End">
+        @copyright
+    </footer>
 </body>
 
 </html>
